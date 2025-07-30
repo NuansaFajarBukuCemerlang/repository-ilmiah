@@ -1,3 +1,13 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(rgba(31, 154, 255, 0.6), rgba(42, 149, 255, 0.6)),
+    url("img/bg.jpg") no-repeat center center/cover;
+  background-attachment: fixed;
+  color: #333;
+}
+
+/* CONTAINER DETAIL */
 .detail-container {
   max-width: 800px;
   margin: 40px auto;
@@ -7,6 +17,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* JUDUL & PENULIS */
 .book-title {
   text-align: center;
   color: #002b7a;
@@ -20,6 +31,7 @@
   margin-bottom: 20px;
 }
 
+/* COVER */
 .book-cover-section {
   display: flex;
   justify-content: center;
@@ -32,6 +44,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+/* ABSTRAK */
 .book-abstract {
   font-size: 16px;
   line-height: 1.7;
@@ -40,20 +53,16 @@
   text-align: justify;
 }
 
+/* DOWNLOAD BUTTONS */
 .download-section {
+  margin-top: 30px;
   text-align: center;
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
 }
-body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
-  background: linear-gradient(rgba(31, 154, 255, 0.6), rgba(42, 149, 255, 0.6)),
-    url("img/bg.jpg") no-repeat center center/cover;
-  color: #333;
-}
+
 .btn {
   display: inline-block;
   background-color: #002b7a;
@@ -61,8 +70,6 @@ body {
   padding: 10px 15px;
   text-decoration: none;
   border-radius: 5px;
-  margin-top: 10px;
-  margin-right: 10px;
   font-size: 14px;
   transition: background-color 0.3s ease;
 }
@@ -79,10 +86,6 @@ body {
   background-color: #003d80;
 }
 
-.download-section {
-  margin-top: 30px;
-  text-align: center;
-}
 /* NAVBAR */
 .navbar {
   display: flex;
@@ -119,23 +122,7 @@ body {
   text-decoration: none;
   font-size: 14px;
 }
-/* RESPONSIVE MOBILE */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
 
-  .nav-links {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 10px;
-  }
-
-  .nav-links li {
-    margin-bottom: 10px;
-  }
-}
 /* FOOTER */
 .footer {
   background-color: #000;
@@ -188,6 +175,7 @@ body {
 .footer-section ul li a:hover {
   text-decoration: underline;
 }
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid #444;
@@ -195,4 +183,76 @@ body {
   padding-top: 15px;
   font-size: 13px;
   color: #aaa;
+}
+
+/* RESPONSIVE - TABLET & MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .detail-container {
+    padding: 15px;
+    margin: 20px 10px;
+  }
+
+  .book-title {
+    font-size: 22px;
+  }
+
+  .book-author {
+    font-size: 14px;
+  }
+
+  .book-cover {
+    width: 150px;
+  }
+
+  .book-abstract {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .download-section {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    font-size: 15px;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .book-title {
+    font-size: 20px;
+  }
+
+  .book-cover {
+    width: 120px;
+  }
+
+  .book-abstract {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
