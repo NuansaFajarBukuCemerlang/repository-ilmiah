@@ -219,15 +219,24 @@ h2 {
   }
 
   .nav-links {
+    display: none;
     flex-direction: column;
     width: 100%;
+    background-color: #1C5092;
+    padding: 10px 0;
     margin-top: 10px;
   }
-
-  .nav-links li {
-    margin-bottom: 10px;
+  .nav-links.show {
+    display: flex;
   }
-
+  .nav-links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .nav-link a{
+    display: block;
+    width: 100%;
+  }
   .hero h1 {
     font-size: 1.8rem;
   }
@@ -279,3 +288,14 @@ h2 {
   background-color: #002b7a;
   font-weight: bold;
 }
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+}
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
