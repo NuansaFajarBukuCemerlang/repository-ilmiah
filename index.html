@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="google-site-verification" content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo" />
+    <meta
+      name="google-site-verification"
+      content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo"
+    />
     <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
     <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- NAVIGATION -->
@@ -17,10 +23,10 @@
       </div>
       <div class="menu-toggle" id="menu-toggle">&#9776;</div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#">Beranda</a></li>
+        <li><a href="index.html">Beranda</a></li>
         <li><a href="#">Tentang Kami</a></li>
         <li><a href="#">Kontak</a></li>
-        <li><a href="#">Katalog Buku</a></li>
+        <li><a href="#daftar-artikel">Katalog Buku</a></li>
       </ul>
     </nav>
 
@@ -29,7 +35,8 @@
       <div class="hero-content">
         <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
         <p>
-          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari Nuansa Fajar Cemerlang.
+          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari
+          Nuansa Fajar Cemerlang.
         </p>
         <div class="hero-buttons">
           <a href="#daftar-artikel" class="btn">Katalog Buku</a>
@@ -51,22 +58,30 @@
       <div id="card-container">
         <!-- BUKU 1 -->
         <div class="card">
-          <img src="img/cover/COVER FILIAL VALUE.jpg" alt="Cover Buku Filial Value" class="cover-img" />
+          <img
+            src="img/cover/COVER FILIAL VALUE.jpg"
+            alt="Cover Buku Filial Value"
+            class="cover-img"
+          />
           <div class="card-content">
-            <h3>FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA</h3>
+            <h3>
+              FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA
+            </h3>
             <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
             <a href="buku-detail/filial-value.html" class="btn">Baca Detail</a>
-            <a href="files/filial-value.pdf" class="btn btn-secondary">Download PDF</a>
           </div>
         </div>
         <!-- BUKU 2 -->
         <div class="card">
-          <img src="img/cover/COVER FILIAL VALUE.jpg" alt="Cover Buku" class="cover-img" />
+          <img
+            src="img/cover/COVER FILIAL VALUE.jpg"
+            alt="Cover Buku"
+            class="cover-img"
+          />
           <div class="card-content">
             <h3>CONTOH BUKU LAIN</h3>
             <p>Oleh: Nama Penulis</p>
             <a href="buku-detail/contoh.html" class="btn">Baca Detail</a>
-            <a href="files/contoh.pdf" class="btn btn-secondary">Download PDF</a>
           </div>
         </div>
         <!-- Tambahkan buku lainnya di sini -->
@@ -78,10 +93,15 @@
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section about">
-          <img src="img/logo.png" alt="Nuansa Fajar Cemerlang" class="footer-logo" />
+          <img
+            src="img/logo.png"
+            alt="Nuansa Fajar Cemerlang"
+            class="footer-logo"
+          />
           <p>
-            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang menyajikan produk optimal
-            yang mendukung proses belajar-mengajar secara efektif melalui media online.
+            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang
+            menyajikan produk optimal yang mendukung proses belajar-mengajar
+            secara efektif melalui media online.
           </p>
         </div>
         <div class="footer-section links">
@@ -148,7 +168,9 @@
         cards.forEach((card) => (card.style.display = "none"));
         const start = (currentPage - 1) * cardsPerPage;
         const end = currentPage * cardsPerPage;
-        filteredCards.slice(start, end).forEach((card) => (card.style.display = "flex"));
+        filteredCards
+          .slice(start, end)
+          .forEach((card) => (card.style.display = "flex"));
         updatePagination(totalPages);
       }
 
