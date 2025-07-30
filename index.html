@@ -1,50 +1,236 @@
-
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-site-verification" content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo" />
-  <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-
-  <nav class="navbar">
-    <div class="logo">Nuansa Fajar Cemerlang</div>
-    <ul class="nav-links">
-      <li><a href="#">Beranda</a></li>
-      <li><a href="#">Tentang Kami</a></li>
-      <li><a href="#">Kontak</a></li>
-      <li><a href="#">Katalog Buku</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
-      <p>Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari Nuansa Fajar Cemerlang.</p>
-      <div class="hero-buttons">
-        <a href="#daftar-artikel" class="btn">Katalog Buku</a>
-        <a href="#" class="btn btn-secondary">Hubungi Kami</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="google-site-verification"
+      content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo"
+    />
+    <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/logo.png" alt="Logo" class="logo-img" />
       </div>
-    </div>
-  </section>
+      <ul class="nav-links">
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Kontak</a></li>
+        <li><a href="#">Katalog Buku</a></li>
+      </ul>
+    </nav>
 
-  <section class="content" id="daftar-artikel">
-    <h2>Daftar Repository Ilmiah</h2>
-    <div class="card">
-      <h3>FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA</h3>
-      <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
-      <a href="filial-value.html" class="btn">Baca Detail</a>
-      <a href="files/filial-value.pdf" class="btn btn-secondary">Download PDF</a>
-    </div>
-  </section>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
+        <p>
+          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari
+          Nuansa Fajar Cemerlang.
+        </p>
+        <div class="hero-buttons">
+          <a href="#daftar-artikel" class="btn">Katalog Buku</a>
+          <a href="#" class="btn btn-secondary">Hubungi Kami</a>
+        </div>
+      </div>
+    </section>
 
-  <footer>
-    &copy; 2025 Nuansa Fajar Cemerlang - Repository Ilmiah
-  </footer>
+    <section class="content" id="daftar-artikel">
+      <h2>Daftar Repository Ilmiah</h2>
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari judul atau penulis..."
+        class="search-box"
+        onkeyup="filterCards()"
+      />
 
-</body>
+      <div id="card-container">
+        <!-- BUKU 1 -->
+        <div class="card">
+          <img
+            src="img/cover/COVER FILIAL VALUE.jpg"
+            alt="Cover Buku Filial Value"
+            class="cover-img"
+          />
+          <div class="card-content">
+            <h3>
+              FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA
+            </h3>
+            <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
+            <a href="buku-detail/filial-value.html" class="btn">Baca Detail</a>
+            <a href="files/filial-value.pdf" class="btn btn-secondary"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+
+        <!-- BUKU 2 -->
+        <div class="card">
+          <img
+            src="img/cover/COVER FILIAL VALUE.jpg"
+            alt="Cover Buku"
+            class="cover-img"
+          />
+          <div class="card-content">
+            <h3>CONTOH BUKU LAIN</h3>
+            <p>Oleh: Nama Penulis</p>
+            <a href="buku-detail/contoh.html" class="btn">Baca Detail</a>
+            <a href="files/contoh.pdf" class="btn btn-secondary"
+              >Download PDF</a
+            >
+          </div>
+        </div>
+
+        <!-- Tambahkan kartu lain di sini -->
+         
+        </div>
+      </div>
+
+      <div id="pagination" class="pagination"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section about">
+          <img
+            src="img/logo.png"
+            alt="Nuansa Fajar Cemerlang"
+            class="footer-logo"
+          />
+          <p>
+            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang
+            menyajikan produk optimal yang mendukung proses belajar-mengajar
+            secara efektif melalui media online.
+          </p>
+        </div>
+
+        <div class="footer-section links">
+          <h4>Halaman Terkait</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Books</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section links">
+          <h4>Tautan Resmi</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section contact">
+          <h4>Terhubung Bersama Kami</h4>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Alamat Email" required />
+            <button type="submit">Kirim</button>
+          </form>
+          <p>📍 Jl. Letjen S. Parman No.24, Jakarta Barat, 11480</p>
+          <p>✉️ operasionalnnfc@gmail.com</p>
+          <p>📞 021-29866319</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Penerbit Nuansa Fajar Cemerlang</p>
+        <p>Copyright © 2025 by Nuansa Fajar Cemerlang. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const cardsPerPage = 5;
+      let currentPage = 1;
+      let allCards = [];
+      let filteredCards = [];
+
+      function getAllCards() {
+        const container = document.getElementById("card-container");
+        return Array.from(container.getElementsByClassName("card"));
+      }
+
+      function filterCards() {
+        const input = document.getElementById("searchInput");
+        const filter = input.value.toLowerCase();
+        const cards = getAllCards();
+
+        // Filter cards yang cocok
+        filteredCards = cards.filter((card) =>
+          card.textContent.toLowerCase().includes(filter)
+        );
+        currentPage = 1;
+        paginateCards();
+      }
+
+      function paginateCards() {
+        const cards = getAllCards();
+        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+
+        cards.forEach((card) => (card.style.display = "none")); // Sembunyikan semua
+
+        const start = (currentPage - 1) * cardsPerPage;
+        const end = currentPage * cardsPerPage;
+
+        filteredCards
+          .slice(start, end)
+          .forEach((card) => (card.style.display = "flex"));
+        updatePagination(totalPages);
+      }
+
+      function updatePagination(totalPages) {
+        const pagination = document.getElementById("pagination");
+        pagination.innerHTML = "";
+
+        if (totalPages <= 1) return;
+
+        if (currentPage > 1) {
+          const prevBtn = document.createElement("button");
+          prevBtn.textContent = "« Prev";
+          prevBtn.onclick = () => {
+            currentPage--;
+            paginateCards();
+          };
+          pagination.appendChild(prevBtn);
+        }
+
+        for (let i = 1; i <= totalPages; i++) {
+          const btn = document.createElement("button");
+          btn.textContent = i;
+          if (i === currentPage) btn.classList.add("active");
+          btn.onclick = () => {
+            currentPage = i;
+            paginateCards();
+          };
+          pagination.appendChild(btn);
+        }
+
+        if (currentPage < totalPages) {
+          const nextBtn = document.createElement("button");
+          nextBtn.textContent = "Next »";
+          nextBtn.onclick = () => {
+            currentPage++;
+            paginateCards();
+          };
+          pagination.appendChild(nextBtn);
+        }
+      }
+
+      window.onload = () => {
+        allCards = getAllCards();
+        filteredCards = allCards; // default semua tampil
+        paginateCards();
+      };
+    </script>
+  </body>
 </html>
