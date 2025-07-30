@@ -1,236 +1,281 @@
-<!DOCTYPE html>
-<html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="google-site-verification"
-      content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo"
-    />
-    <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="img/logo.png" alt="Logo" class="logo-img" />
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Tentang Kami</a></li>
-        <li><a href="#">Kontak</a></li>
-        <li><a href="#">Katalog Buku</a></li>
-      </ul>
-    </nav>
+/* RESET DASAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
-        <p>
-          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari
-          Nuansa Fajar Cemerlang.
-        </p>
-        <div class="hero-buttons">
-          <a href="#daftar-artikel" class="btn">Katalog Buku</a>
-          <a href="#" class="btn btn-secondary">Hubungi Kami</a>
-        </div>
-      </div>
-    </section>
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: #f7f9fc;
+  color: #333;
+}
 
-    <section class="content" id="daftar-artikel">
-      <h2>Daftar Repository Ilmiah</h2>
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="Cari judul atau penulis..."
-        class="search-box"
-        onkeyup="filterCards()"
-      />
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: linear-gradient(270deg, #0F2027 0%, #1C5092 100%);
+  padding: 10px 20px;
+  color: white;
+}
 
-      <div id="card-container">
-        <!-- BUKU 1 -->
-        <div class="card">
-          <img
-            src="img/cover/COVER FILIAL VALUE.jpg"
-            alt="Cover Buku Filial Value"
-            class="cover-img"
-          />
-          <div class="card-content">
-            <h3>
-              FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA
-            </h3>
-            <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
-            <a href="buku-detail/filial-value.html" class="btn">Baca Detail</a>
-            <a href="files/filial-value.pdf" class="btn btn-secondary"
-              >Download PDF</a
-            >
-          </div>
-        </div>
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
 
-        <!-- BUKU 2 -->
-        <div class="card">
-          <img
-            src="img/cover/COVER FILIAL VALUE.jpg"
-            alt="Cover Buku"
-            class="cover-img"
-          />
-          <div class="card-content">
-            <h3>CONTOH BUKU LAIN</h3>
-            <p>Oleh: Nama Penulis</p>
-            <a href="buku-detail/contoh.html" class="btn">Baca Detail</a>
-            <a href="files/contoh.pdf" class="btn btn-secondary"
-              >Download PDF</a
-            >
-          </div>
-        </div>
+.logo-img {
+  height: 60px;
+  object-fit: contain;
+}
 
-        <!-- Tambahkan kartu lain di sini -->
-         
-        </div>
-      </div>
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
 
-      <div id="pagination" class="pagination"></div>
-    </section>
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
 
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-section about">
-          <img
-            src="img/logo.png"
-            alt="Nuansa Fajar Cemerlang"
-            class="footer-logo"
-          />
-          <p>
-            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang
-            menyajikan produk optimal yang mendukung proses belajar-mengajar
-            secara efektif melalui media online.
-          </p>
-        </div>
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(rgba(31, 154, 255, 0.663), rgba(42, 149, 255, 0.679)),
+              url('img/bg.jpg') no-repeat center center/cover;
+  color: rgb(255, 255, 255);
+  padding: 60px 20px;
+  text-align: center;
+}
 
-        <div class="footer-section links">
-          <h4>Halaman Terkait</h4>
-          <ul>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Books</a></li>
-          </ul>
-        </div>
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
 
-        <div class="footer-section links">
-          <h4>Tautan Resmi</h4>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms and Conditions</a></li>
-            <li><a href="#">Disclaimer</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-        </div>
+.hero-buttons .btn {
+  margin: 10px;
+}
 
-        <div class="footer-section contact">
-          <h4>Terhubung Bersama Kami</h4>
-          <form class="subscribe-form">
-            <input type="email" placeholder="Alamat Email" required />
-            <button type="submit">Kirim</button>
-          </form>
-          <p>📍 Jl. Letjen S. Parman No.24, Jakarta Barat, 11480</p>
-          <p>✉️ operasionalnnfc@gmail.com</p>
-          <p>📞 021-29866319</p>
-        </div>
-      </div>
+/* CONTENT */
+.content {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
 
-      <div class="footer-bottom">
-        <p>Penerbit Nuansa Fajar Cemerlang</p>
-        <p>Copyright © 2025 by Nuansa Fajar Cemerlang. All rights reserved.</p>
-      </div>
-    </footer>
+h2 {
+  text-align: center;
+  color: #002b7a;
+  margin-bottom: 20px;
+}
 
-    <script>
-      const cardsPerPage = 5;
-      let currentPage = 1;
-      let allCards = [];
-      let filteredCards = [];
+/* CARD */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
 
-      function getAllCards() {
-        const container = document.getElementById("card-container");
-        return Array.from(container.getElementsByClassName("card"));
-      }
+.cover-img {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
 
-      function filterCards() {
-        const input = document.getElementById("searchInput");
-        const filter = input.value.toLowerCase();
-        const cards = getAllCards();
+.card-content {
+  flex: 1;
+  min-width: 200px;
+}
 
-        // Filter cards yang cocok
-        filteredCards = cards.filter((card) =>
-          card.textContent.toLowerCase().includes(filter)
-        );
-        currentPage = 1;
-        paginateCards();
-      }
+/* BUTTON */
+.btn {
+  display: inline-block;
+  background-color: #002b7a;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  font-size: 14px;
+}
 
-      function paginateCards() {
-        const cards = getAllCards();
-        const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
+.btn-secondary {
+  background-color: #0056b3;
+}
 
-        cards.forEach((card) => (card.style.display = "none")); // Sembunyikan semua
+/* FOOTER */
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 40px 20px 20px;
+  font-size: 14px;
+}
 
-        const start = (currentPage - 1) * cardsPerPage;
-        const end = currentPage * cardsPerPage;
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+}
 
-        filteredCards
-          .slice(start, end)
-          .forEach((card) => (card.style.display = "flex"));
-        updatePagination(totalPages);
-      }
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+}
 
-      function updatePagination(totalPages) {
-        const pagination = document.getElementById("pagination");
-        pagination.innerHTML = "";
+.footer-logo {
+  width: 180px;
+  margin-bottom: 10px;
+}
 
-        if (totalPages <= 1) return;
+.footer-section h4 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+  display: inline-block;
+  padding-bottom: 5px;
+}
 
-        if (currentPage > 1) {
-          const prevBtn = document.createElement("button");
-          prevBtn.textContent = "« Prev";
-          prevBtn.onclick = () => {
-            currentPage--;
-            paginateCards();
-          };
-          pagination.appendChild(prevBtn);
-        }
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
 
-        for (let i = 1; i <= totalPages; i++) {
-          const btn = document.createElement("button");
-          btn.textContent = i;
-          if (i === currentPage) btn.classList.add("active");
-          btn.onclick = () => {
-            currentPage = i;
-            paginateCards();
-          };
-          pagination.appendChild(btn);
-        }
+.footer-section ul li {
+  margin-bottom: 8px;
+}
 
-        if (currentPage < totalPages) {
-          const nextBtn = document.createElement("button");
-          nextBtn.textContent = "Next »";
-          nextBtn.onclick = () => {
-            currentPage++;
-            paginateCards();
-          };
-          pagination.appendChild(nextBtn);
-        }
-      }
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+}
 
-      window.onload = () => {
-        allCards = getAllCards();
-        filteredCards = allCards; // default semua tampil
-        paginateCards();
-      };
-    </script>
-  </body>
-</html>
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #444;
+  margin-top: 40px;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.social-icons a img {
+  width: 32px;
+  margin-right: 10px;
+}
+
+.subscribe-form {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.subscribe-form input[type="email"] {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-form button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-links li {
+    margin-bottom: 10px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cover-img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+  }
+
+  .card-content {
+    width: 100%;
+  }
+}
+.search-box {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+.pagination {
+  text-align: center;
+  margin-top: 20px;
+}
+.pagination button {
+  margin: 3px;
+  padding: 6px 12px;
+  border: none;
+  background-color: #1c5092;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+.pagination button:hover {
+  background-color: #002b7a;
+}
+.pagination button.active {
+  background-color: #002b7a;
+  font-weight: bold;
+}
