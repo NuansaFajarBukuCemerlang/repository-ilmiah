@@ -3,24 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="google-site-verification"
-      content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo"
-    />
+    <meta name="google-site-verification" content="R1mTwMgNmpWVn5lQo7MczPANkyj7aq4x4mHaoihy9Oo" />
     <title>Repository Ilmiah | Nuansa Fajar Cemerlang</title>
     <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <!-- NAVIGATION -->
     <nav class="navbar">
       <div class="logo">
         <img src="img/logo.png" alt="Logo" class="logo-img" />
       </div>
-      <ul class="nav-links">
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#">Beranda</a></li>
         <li><a href="#">Tentang Kami</a></li>
         <li><a href="#">Kontak</a></li>
@@ -28,12 +24,12 @@
       </ul>
     </nav>
 
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-content">
         <h1>Temukan Wawasan Baru & Pengalaman Lewat Satu Buku</h1>
         <p>
-          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari
-          Nuansa Fajar Cemerlang.
+          Dukung perjalanan intelektual Anda dengan buku-buku terbaik dari Nuansa Fajar Cemerlang.
         </p>
         <div class="hero-buttons">
           <a href="#daftar-artikel" class="btn">Katalog Buku</a>
@@ -42,6 +38,7 @@
       </div>
     </section>
 
+    <!-- BUKU SECTION -->
     <section class="content" id="daftar-artikel">
       <h2>Daftar Repository Ilmiah</h2>
       <input
@@ -51,67 +48,42 @@
         class="search-box"
         onkeyup="filterCards()"
       />
-
       <div id="card-container">
         <!-- BUKU 1 -->
         <div class="card">
-          <img
-            src="img/cover/COVER FILIAL VALUE.jpg"
-            alt="Cover Buku Filial Value"
-            class="cover-img"
-          />
+          <img src="img/cover/COVER FILIAL VALUE.jpg" alt="Cover Buku Filial Value" class="cover-img" />
           <div class="card-content">
-            <h3>
-              FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA
-            </h3>
+            <h3>FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA</h3>
             <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
             <a href="buku-detail/filial-value.html" class="btn">Baca Detail</a>
-            <a href="files/filial-value.pdf" class="btn btn-secondary"
-              >Download PDF</a
-            >
+            <a href="files/filial-value.pdf" class="btn btn-secondary">Download PDF</a>
           </div>
         </div>
-
         <!-- BUKU 2 -->
         <div class="card">
-          <img
-            src="img/cover/COVER FILIAL VALUE.jpg"
-            alt="Cover Buku"
-            class="cover-img"
-          />
+          <img src="img/cover/COVER FILIAL VALUE.jpg" alt="Cover Buku" class="cover-img" />
           <div class="card-content">
             <h3>CONTOH BUKU LAIN</h3>
             <p>Oleh: Nama Penulis</p>
             <a href="buku-detail/contoh.html" class="btn">Baca Detail</a>
-            <a href="files/contoh.pdf" class="btn btn-secondary"
-              >Download PDF</a
-            >
+            <a href="files/contoh.pdf" class="btn btn-secondary">Download PDF</a>
           </div>
         </div>
-
-        <!-- Tambahkan kartu lain di sini -->
-         
-        </div>
+        <!-- Tambahkan buku lainnya di sini -->
       </div>
-
       <div id="pagination" class="pagination"></div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section about">
-          <img
-            src="img/logo.png"
-            alt="Nuansa Fajar Cemerlang"
-            class="footer-logo"
-          />
+          <img src="img/logo.png" alt="Nuansa Fajar Cemerlang" class="footer-logo" />
           <p>
-            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang
-            menyajikan produk optimal yang mendukung proses belajar-mengajar
-            secara efektif melalui media online.
+            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang menyajikan produk optimal
+            yang mendukung proses belajar-mengajar secara efektif melalui media online.
           </p>
         </div>
-
         <div class="footer-section links">
           <h4>Halaman Terkait</h4>
           <ul>
@@ -120,7 +92,6 @@
             <li><a href="#">Books</a></li>
           </ul>
         </div>
-
         <div class="footer-section links">
           <h4>Tautan Resmi</h4>
           <ul>
@@ -131,7 +102,6 @@
             <li><a href="#">FAQ</a></li>
           </ul>
         </div>
-
         <div class="footer-section contact">
           <h4>Terhubung Bersama Kami</h4>
           <form class="subscribe-form">
@@ -143,13 +113,13 @@
           <p>📞 021-29866319</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>Penerbit Nuansa Fajar Cemerlang</p>
         <p>Copyright © 2025 by Nuansa Fajar Cemerlang. All rights reserved.</p>
       </div>
     </footer>
 
+    <!-- SCRIPT PAGINATION & SEARCH -->
     <script>
       const cardsPerPage = 5;
       let currentPage = 1;
@@ -165,8 +135,6 @@
         const input = document.getElementById("searchInput");
         const filter = input.value.toLowerCase();
         const cards = getAllCards();
-
-        // Filter cards yang cocok
         filteredCards = cards.filter((card) =>
           card.textContent.toLowerCase().includes(filter)
         );
@@ -177,24 +145,17 @@
       function paginateCards() {
         const cards = getAllCards();
         const totalPages = Math.ceil(filteredCards.length / cardsPerPage);
-
-        cards.forEach((card) => (card.style.display = "none")); // Sembunyikan semua
-
+        cards.forEach((card) => (card.style.display = "none"));
         const start = (currentPage - 1) * cardsPerPage;
         const end = currentPage * cardsPerPage;
-
-        filteredCards
-          .slice(start, end)
-          .forEach((card) => (card.style.display = "flex"));
+        filteredCards.slice(start, end).forEach((card) => (card.style.display = "flex"));
         updatePagination(totalPages);
       }
 
       function updatePagination(totalPages) {
         const pagination = document.getElementById("pagination");
         pagination.innerHTML = "";
-
         if (totalPages <= 1) return;
-
         if (currentPage > 1) {
           const prevBtn = document.createElement("button");
           prevBtn.textContent = "« Prev";
@@ -204,7 +165,6 @@
           };
           pagination.appendChild(prevBtn);
         }
-
         for (let i = 1; i <= totalPages; i++) {
           const btn = document.createElement("button");
           btn.textContent = i;
@@ -215,7 +175,6 @@
           };
           pagination.appendChild(btn);
         }
-
         if (currentPage < totalPages) {
           const nextBtn = document.createElement("button");
           nextBtn.textContent = "Next »";
@@ -229,9 +188,19 @@
 
       window.onload = () => {
         allCards = getAllCards();
-        filteredCards = allCards; // default semua tampil
+        filteredCards = allCards;
         paginateCards();
       };
+    </script>
+
+    <!-- SCRIPT NAVBAR DROPDOWN -->
+    <script>
+      const toggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+
+      toggle.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+      });
     </script>
   </body>
 </html>
