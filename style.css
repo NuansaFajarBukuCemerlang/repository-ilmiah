@@ -7,7 +7,7 @@
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   background: #f7f9fc;
   color: #333;
 }
@@ -18,7 +18,7 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  background-image: linear-gradient(270deg, #0F2027 0%, #1C5092 100%);
+  background-image: linear-gradient(270deg, #0f2027 0%, #1c5092 100%);
   padding: 10px 20px;
   color: white;
 }
@@ -51,8 +51,11 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background: linear-gradient(rgba(31, 154, 255, 0.663), rgba(42, 149, 255, 0.679)),
-              url('img/bg.jpg') no-repeat center center/cover;
+  background: linear-gradient(
+      rgba(31, 154, 255, 0.663),
+      rgba(42, 149, 255, 0.679)
+    ),
+    url("img/bg.jpg") no-repeat center center/cover;
   color: rgb(255, 255, 255);
   padding: 60px 20px;
   text-align: center;
@@ -85,7 +88,7 @@ h2 {
   background: white;
   border-radius: 10px;
   padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
   display: flex;
   gap: 20px;
@@ -209,8 +212,6 @@ h2 {
   cursor: pointer;
 }
 
-
-
 /* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
   .navbar {
@@ -222,7 +223,7 @@ h2 {
     display: none;
     flex-direction: column;
     width: 100%;
-    background-color: #1C5092;
+    background-color: #1d4f90;
     padding: 10px 0;
     margin-top: 10px;
   }
@@ -233,7 +234,7 @@ h2 {
     text-align: center;
     padding: 10px 0;
   }
-  .nav-links a{
+  .nav-links a {
     display: block;
     width: 100%;
   }
@@ -282,20 +283,24 @@ h2 {
   transition: background-color 0.3s;
 }
 .pagination button:hover {
-  background-color: #002b7a;
+  background-color: #5e7bb1;
 }
 .pagination button.active {
   background-color: #002b7a;
   font-weight: bold;
 }
 .menu-toggle {
-  display: none;
-  font-size: 28px;
+  font-size: 24px;
   cursor: pointer;
+  display: none;
   color: white;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 1001;
 }
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
-  
+}
