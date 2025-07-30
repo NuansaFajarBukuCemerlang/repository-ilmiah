@@ -4,39 +4,27 @@
     <meta charset="UTF-8" />
     <title>Detail Buku | FILIAL VALUE</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="citation_title"
-      content="FILIAL VALUE (Nilai Dasar–Responsibility, Respect, Care) Keluarga: Kontribusi Penting Dalam Mendukung Caregiver Empowerment Bagi Lansia Demensia"
-    />
-    <meta
-      name="citation_author"
-      content="Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep."
-    />
-    <meta name="citation_publication_date" content="2025/03/01" />
-    <meta
-      name="citation_pdf_url"
-      content="https://nuansafajarcemerlang.github.io/repository-ilmiah/files/filial-value.pdf"
-    />
-    <meta name="citation_language" content="id" />
-    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../style-detail.css" />
+    <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
   </head>
   <body>
+    <!-- NAVIGATION -->
     <nav class="navbar">
-  <div class="logo">
-    <img src="img/logo.png" alt="Logo" class="logo-img" />
-  </div>
+      <div class="logo">
+        <a href="../index.html">
+          <img src="../img/logo.png" alt="Logo" class="logo-img" />
+        </a>
+      </div>
+      <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Beranda</a></li>
+        <li><a href="#">Tentang Kami</a></li>
+        <li><a href="#">Kontak</a></li>
+        <li><a href="#">Katalog Buku</a></li>
+      </ul>
+    </nav>
 
-  <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-  <ul class="nav-links" id="nav-links">
-    <li><a href="#">Beranda</a></li>
-    <li><a href="#">Tentang Kami</a></li>
-    <li><a href="#">Kontak</a></li>
-    <li><a href="#">Katalog Buku</a></li>
-  </ul>
-</nav>
-
+    <!-- CONTENT -->
     <div class="detail-container">
       <h1 class="book-title">FILIAL VALUE</h1>
       <p class="book-author">
@@ -77,14 +65,16 @@
       </div>
 
       <div class="download-section">
-        <a href="../files/filial-value.pdf" class="btn" target="_blank">
-          📄 Lihat PDF
-        </a>
+        <a href="../files/filial-value.pdf" class="btn" target="_blank"
+          >📄 Lihat PDF</a
+        >
         <a href="../index.html" class="btn btn-secondary"
           >← Kembali ke Beranda</a
         >
       </div>
     </div>
+
+    <!-- FOOTER -->
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-section about">
@@ -94,18 +84,10 @@
             class="footer-logo"
           />
           <p>
-            Sebagai lembaga pendidikan berbasis digital, Nuansa Fajar Cemerlang
-            menyajikan produk optimal yang mendukung proses belajar-mengajar
-            secara efektif melalui media online.
+            Nuansa Fajar Cemerlang menyajikan produk pendidikan digital yang
+            efektif dan mudah diakses.
           </p>
-          <!-- <div class="social-icons">
-        <a href="#"><img src="img/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="img/icons/twitter.svg" alt="Twitter"></a>
-        <a href="#"><img src="img/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="img/icons/youtube.svg" alt="YouTube"></a>
-      </div> -->
         </div>
-
         <div class="footer-section links">
           <h4>Halaman Terkait</h4>
           <ul>
@@ -114,7 +96,6 @@
             <li><a href="#">Books</a></li>
           </ul>
         </div>
-
         <div class="footer-section links">
           <h4>Tautan Resmi</h4>
           <ul>
@@ -125,26 +106,30 @@
             <li><a href="#">FAQ</a></li>
           </ul>
         </div>
-
         <div class="footer-section contact">
           <h4>Terhubung Bersama Kami</h4>
           <form class="subscribe-form">
             <input type="email" placeholder="Alamat Email" required />
             <button type="submit">Kirim</button>
           </form>
-          <p>
-            📍 Jl. Letjen S. Parman No.24, RT.1/RW.4, Palmerah, Kec. Palmerah,
-            Kota Jakarta Barat, Daerah Khusus Ibukota Jakarta 11480
-          </p>
+          <p>📍 Jakarta Barat, DKI Jakarta</p>
           <p>✉️ operasionalnnfc@gmail.com</p>
           <p>📞 021-29866319</p>
         </div>
       </div>
-
       <div class="footer-bottom">
         <p>Penerbit Nuansa Fajar Cemerlang</p>
-        <p>Copyright © 2025 by Nuansa Fajar Cemerlang. All rights reserved.</p>
+        <p>© 2025 All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- TOGGLE SCRIPT -->
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("nav-links").classList.toggle("show");
+        });
+    </script>
   </body>
 </html>
