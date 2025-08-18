@@ -13,8 +13,8 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
       rel="stylesheet"
-    />
-  </head>
+    /></head
+  >z
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar">
@@ -56,23 +56,7 @@
         onkeyup="filterCards()"
       />
       <div id="card-container">
-        <!-- BUKU 1 -->
-        <div class="card">
-          <img
-            src="img/cover/COVER FILIAL VALUE.jpg"
-            alt="Cover Buku Filial Value"
-            class="cover-img"
-          />
-          <div class="card-content">
-            <h3>
-              FILIAL VALUE: (NILAI DASAR RESPONSIBILITY, RESPECT, CARE) KELUARGA
-            </h3>
-            <p>Oleh: Dr. Hidayatus Sya’diyah, S.Kep., Ns., M.Kep.</p>
-            <a href="buku-detail/filial-value.html" class="btn">Baca Detail</a>
-          </div>
-        </div>
-        
-        <!-- Tambahkan buku lainnya di sini -->
+        <!-- terisi otomastis oleh supabase -->
       </div>
       <div id="pagination" class="pagination"></div>
     </section>
@@ -126,6 +110,53 @@
         <p>Copyright © 2025 by Nuansa Fajar Cemerlang. All rights reserved.</p>
       </div>
     </footer>
+
+    <!-- SDK supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      const SUPABASE_URL = "https://kijhrzrrksmsggpquwew.supabase.co";
+      const SUPABASE_ANON_KEY =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpamhyenJya3Ntc2dncHF1d2V3Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTUzNDMxODQsImV4cCI6MjA3MDkxOTE4NH0.tb6kVyo2saLrYKnMdepfY8jbgsGjqknvimR4qvbaLmk";
+      const supabaseClient = supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+      );
+
+      async function loadBooks() {
+        const { data, error } = await supabaseClient.from("books").select("*");
+        if (error) {
+          console.error("Error:", error);
+          return;
+        }
+
+        const container = document.getElementById("card-container");
+        container.innerHTML = "";
+
+        data.forEach((book) => {
+          const card = document.createElement("div");
+          card.classList.add("card");
+          card.innerHTML = `
+        <img src="${book.cover_url}" alt="Cover ${
+            book.judul
+          }" class="cover-img"/>
+        <div class="card-content">
+          <h3>${book.judul}</h3>
+          <p>Oleh: ${book.author}</p>
+          <a href="${book.file_url || "#"}" class="btn">Baca Detail</a>
+        </div>
+      `;
+          container.appendChild(card);
+        });
+
+        allCards = getAllCards();
+        filteredCards = allCards;
+        paginateCards();
+      }
+
+      window.onload = () => {
+        loadBooks(); // ambil dari Supabase
+      };
+    </script>
 
     <!-- SCRIPT PAGINATION & SEARCH -->
     <script>
@@ -196,11 +227,11 @@
         }
       }
 
-      window.onload = () => {
-        allCards = getAllCards();
-        filteredCards = allCards;
-        paginateCards();
-      };
+      // window.onload = () => {
+      //   allCards = getAllCards();
+      //   filteredCards = allCards;
+      //   paginateCards();
+      // };
     </script>
 
     <!-- SCRIPT NAVBAR DROPDOWN -->
