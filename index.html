@@ -202,6 +202,7 @@
           prevBtn.onclick = () => {
             currentPage--;
             paginateCards();
+            document.getElementById("daftar-artikel").scrollIntoView({ behavior: "smooth" });
           };
           pagination.appendChild(prevBtn);
         }
@@ -224,6 +225,7 @@
             document.getElementById("daftar-artikel").scrollIntoView({ behavior: "smooth" });
           };
           pagination.appendChild(nextBtn);
+
         }
       }
 
