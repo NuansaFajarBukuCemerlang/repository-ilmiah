@@ -213,6 +213,7 @@
           btn.onclick = () => {
             currentPage = i;
             paginateCards();
+            document.getElementById("daftar-artikel").scrollIntoView({ behavior: "smooth" });
           };
           pagination.appendChild(btn);
         }
